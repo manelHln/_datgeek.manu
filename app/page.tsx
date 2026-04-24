@@ -1,13 +1,10 @@
 import LogosSection from "@/components/LogosSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import FeaturesBanner from "@/components/FeaturesBanner";
-import TransitionSection from "@/components/TransitionSection";
-import DemoBanner from "@/components/DemoBanner";
-import TeamSection from "@/components/TeamSection";
-import SecuritySection from "@/components/SecuritySection";
+import HowItWorks from "@/components/HowItWorks";
+import CTA from "@/components/Cta";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import Expertise from "@/components/Expertise";
 
 export default function Home() {
   return (
@@ -15,12 +12,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <LogosSection />
-      <TestimonialsSection />
-      <FeaturesBanner />
-      <TransitionSection />
-      <DemoBanner />
-      <TeamSection />
-      <SecuritySection />
+      <Expertise />
+      <HowItWorks />
+      <CTA />
       <Footer />
     </div>
   );

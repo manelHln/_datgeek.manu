@@ -2,16 +2,16 @@ import Link from "next/link";
 
 const linkColumns = [
   {
-    title: "Links",
-    links: ["Home", "Markups", "FAQ", "Team", "Contact", "Security/Blog"],
+    title: "Menu",
+    links: ["Home", "Services", "Projects", "Process", "About", "Contact"],
   },
   {
-    title: "Resources",
-    links: ["Attorneys", "Legal Ops", "Management"],
+    title: "Services",
+    links: ["Web Applications", "Backend Systems", "Data Engineering"],
   },
   {
-    title: "Legal",
-    links: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+    title: "Connect",
+    links: ["LinkedIn", "X/Twitter", "GitHub"],
   },
 ];
 
@@ -32,17 +32,21 @@ export default function Footer() {
             >
               <circle cx="12" cy="12" r="10" />
             </svg>
-            Markups.ai
+            datgeek.manu
           </div>
           <div className="flex gap-2.5 mt-3">
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/manuholonou/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[30px] h-[30px] bg-[#e0e0d5] rounded-md flex items-center justify-center text-xs text-[#555] hover:bg-[#d0d0c5] transition-colors"
             >
               in
             </Link>
             <Link
-              href="#"
+              href="https://x.com/datgeek_manu"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[30px] h-[30px] bg-[#e0e0d5] rounded-md flex items-center justify-center text-xs text-[#555] hover:bg-[#d0d0c5] transition-colors"
             >
               𝕏
@@ -60,7 +64,7 @@ export default function Footer() {
               <Link
                 key={link}
                 href="#"
-                className="block text-[13px] text-[#666] mb-1.5 hover:text-orange transition-colors"
+                className="block text-[20px] text-[#666] mb-1.5 hover:text-orange transition-colors"
               >
                 {link}
               </Link>
@@ -74,22 +78,21 @@ export default function Footer() {
             Get in Touch
           </h4>
           <Link
-            href="mailto:info@markups.ai"
-            className="text-[13px] text-[#666] hover:text-orange transition-colors"
+            href="mailto:holonouemmanuel0@gmail.com"
+            className="text-[20px] text-[#666] hover:text-orange transition-colors"
           >
-            ✉ info@markups.ai
+            ✉ holonouemmanuel0@gmail.com
           </Link>
-          <p className="text-xs text-[#888] mt-2">
-            Agent Marko is operated by Marko Group Solutions, Inc. (dba
-            &ldquo;Markups.ai&rdquo;), a Delaware C-Corp.
+          <p className="text-xs text-primary-dark mt-2">
+            Available for consulting and full-time opportunities.
           </p>
         </div>
       </div>
 
       {/* Bottom */}
       <div className="mx-auto flex max-w-[1000px] items-center justify-between border-t border-black/7 pt-5 text-[11px] text-[#999]">
-        <span>© Copyright 2024. Markups.ai</span>
-        <span>Markups.ai Privacy Policy &amp; Terms of Service</span>
+        <span>© Copyright 2026. datgeek.manu</span>
+        <span>All rights reserved</span>
       </div>
     </footer>
   );

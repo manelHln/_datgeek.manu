@@ -1,24 +1,43 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { Faculty_Glyphic } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const ltSuperior = localFont({
+  src: [
+    { path: "./assets/fonts/lt_superior/LTSuperior-Thin.ttf", weight: "100", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-ThinItalic.ttf", weight: "100", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-ExtraLight.ttf", weight: "200", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-ExtraLightItalic.ttf", weight: "200", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-Light.ttf", weight: "300", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-LightItalic.ttf", weight: "300", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-Italic.ttf", weight: "400", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-MediumItalic.ttf", weight: "500", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-SemiBoldItalic.ttf", weight: "600", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-Bold.ttf", weight: "700", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-BoldItalic.ttf", weight: "700", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-ExtraBold.ttf", weight: "800", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-ExtraBoldItalic.ttf", weight: "800", style: "italic" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-Black.ttf", weight: "900", style: "normal" },
+    { path: "./assets/fonts/lt_superior/LTSuperior-BlackItalic.ttf", weight: "900", style: "italic" },
+  ],
+  variable: "--font-lt-superior",
 });
 
-const dmSerif = DM_Serif_Display({
-  variable: "--font-dm-serif",
+const facultyGlyphic = Faculty_Glyphic({
+  variable: "--font-faculty-glyphic",
   subsets: ["latin"],
   weight: ["400"],
-  style: ["normal", "italic"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
-  title: "Markups.ai – Email Agent Marko",
+  title: "datgeek.manu – Full-Stack Software Engineer",
   description:
-    "Agent Marko is trained by 70+ top-tier lawyers on 70+ contracts to apply hundreds of custom moves in any client's negotiations.",
+    "Building scalable web applications and APIs. Full-stack development, backend systems, and data engineering. Available for consulting and freelance projects.",
 };
 
 export default function RootLayout({
@@ -29,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${dmSerif.variable} font-sans antialiased`}
+        className={`${ltSuperior.variable} ${facultyGlyphic.variable} font-sans antialiased`}
       >
         {children}
       </body>

@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const teamMembers = [
-  { initials: "BP", name: "Brian Powers", role: "Chief Executive Officer", bg: "bg-gradient-to-br from-[#2c4a7c] to-[#1a2f55]" },
-  { initials: "SS", name: "Sam Shelley", role: "Chief Strategy Officer", bg: "bg-gradient-to-br from-[#3d6b8c] to-[#2a4f6e]" },
-  { initials: "DH", name: "Debbie Captain Henry", role: "Chief Revenue Officer", bg: "bg-gradient-to-br from-[#b5824a] to-[#8c6035]" },
-  { initials: "GB", name: "Garry A. Berger", role: "Chief AI Advisor", bg: "bg-gradient-to-br from-[#e0c8b0] to-[#c8a87a]" },
-  { initials: "CC", name: "Cassie Cam", role: "Development Engineer", bg: "bg-gradient-to-br from-[#607b9e] to-[#3a5580]" },
-  { initials: "BB", name: "Ben Blachman", role: "Chief AI & ML Advisor", bg: "bg-gradient-to-br from-[#3d3535] to-[#241e1e]" },
+  { initials: "P1", name: "E-Commerce Platform", role: "Full-stack marketplace with payments", bg: "bg-gradient-to-br from-[#2c4a7c] to-[#1a2f55]" },
+  { initials: "P2", name: "Analytics Dashboard", role: "Real-time data visualization system", bg: "bg-gradient-to-br from-[#3d6b8c] to-[#2a4f6e]" },
+  { initials: "P3", name: "API Integration Platform", role: "Microservices with REST & GraphQL", bg: "bg-gradient-to-br from-[#b5824a] to-[#8c6035]" },
+  { initials: "P4", name: "Content Management System", role: "Headless CMS with rich editor", bg: "bg-gradient-to-br from-[#e0c8b0] to-[#c8a87a]" },
+  { initials: "P5", name: "Data Pipeline", role: "ETL workflows and data warehousing", bg: "bg-gradient-to-br from-[#607b9e] to-[#3a5580]" },
+  { initials: "P6", name: "Authentication Service", role: "SSO and multi-tenant auth system", bg: "bg-gradient-to-br from-[#3d3535] to-[#241e1e]" },
 ];
 
 export default function TeamSection() {
@@ -17,13 +17,13 @@ export default function TeamSection() {
           {/* Text – sticky on desktop */}
           <div className="md:sticky md:top-[52px] md:self-start pt-5">
             <span className="inline-block text-[11px] font-semibold tracking-[1px] text-orange border border-orange rounded-full px-3 py-1 mb-4 uppercase">
-              Our Executive Team
+              Selected Projects
             </span>
             <h2 className="font-serif text-[32px] max-w-[320px] leading-[1.25]">
               <em className="not-italic text-orange">
-                Highly experienced executives,
+                Real-world solutions,
               </em>{" "}
-              leading a team of top AI engineers and lawyers
+              built with modern tech and best practices
             </h2>
           </div>
 
@@ -38,11 +38,11 @@ export default function TeamSection() {
                 </div>
                 <Link
                   href="#"
-                  className="text-[13px] text-orange font-semibold block mt-1.5 hover:underline"
+                  className="text-[20px] text-orange font-semibold block mt-1.5 hover:underline"
                 >
                   {m.name}
                 </Link>
-                <span className="text-[11px] text-[#888]">{m.role}</span>
+                <span className="text-[11px] text-primary-dark">{m.role}</span>
               </div>
             ))}
           </div>

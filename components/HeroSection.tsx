@@ -1,46 +1,42 @@
 import Link from "next/link";
+import HeroWorkingAnimation from "./HeroWorkingAnimation";
+import ParticleBackground from "./ParticleBackground";
+import { ArrowRight, Braces } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-cream text-center px-5 pt-15 pb-12">
-      {/* Duck Icon */}
-      <div className="mx-auto mb-3 w-16 h-16">
-        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="42" cy="48" rx="22" ry="15" fill="#e8641a" opacity="0.9" />
-          <circle cx="35" cy="36" r="14" fill="#e8641a" />
-          <ellipse cx="22" cy="38" rx="8" ry="5" fill="#f5a623" />
-          <circle cx="30" cy="33" r="2" fill="#1a1a2e" />
-          <ellipse
-            cx="48"
-            cy="60"
-            rx="12"
-            ry="4"
-            fill="#f5a623"
-            transform="rotate(-10 48 60)"
-          />
-        </svg>
+    <section className="relative overflow-hidden bg-cream text-center px-5 pt-15 pb-12">
+      <ParticleBackground />
+      <div className="flex justify-center h-28 mb-8">
+        <HeroWorkingAnimation />
       </div>
 
-      <div className="text-[11px] font-semibold tracking-[2px] text-[#888] uppercase mb-2">
-        All Kin. No Platform.
-      </div>
+      <span className="text-[20px] bg-white rounded-full py-4 px-6 text-primary-dark font-semibold">
+        Software Engineer. Tech Enthusiast.
+      </span>
 
-      <h1 className="font-serif text-[clamp(32px,5vw,54px)] leading-[1.15] text-text-dark max-w-[620px] mx-auto mt-4">
-        Email Agent Marko to Negotiate Any Contract.{" "}
-        <span className="text-orange">No New Platform Required.</span>
+      <h1 className="font-serif text-[clamp(32px,5vw,64px)] leading-[1.15] text-primary-dark max-w-3/5 mx-auto mt-8">
+        Build Production-Ready Software That Scales{" "}
+        <span className="text-orange">From Idea to Production.</span>
       </h1>
 
-      <p className="text-[#555] text-[15px] max-w-[420px] mx-auto mt-3.5 leading-relaxed">
-        Agent Marko is trained by 70+ top-tier lawyers on 70+ contracts to apply
-        hundreds of custom moves in any client&apos;s negotiations.
+      <p className="text-primary-dark text-[20px] font-medium max-w-3/6 mx-auto mt-12 break-words leading-relaxed">
+        I design and build scalable web applications, APIs, and data pipelines.
+        Specializing in full-stack development with modern frameworks and cloud infrastructure.
       </p>
 
-      <Link
-        href="#"
-        className="mt-5 inline-block rounded-full bg-orange px-7 py-3 text-sm font-semibold text-white hover:bg-orange/90 transition-colors"
+      <div className="flex justify-center mt-5">
+        <Link
+        href="mailto:holonouemmanuel0@gmail.com"
+        className="flex items-center text-center gap-2 rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white hover:bg-orange/90 transition-colors"
       >
-        Book a demo →
+        <span className="bg-white rounded-full text-orange flex justify-center items-center w-[40px] h-[40px]">
+          <Braces />
+        </span>
+        <span className="text-[20px]">Contact me</span>
+        <ArrowRight />
       </Link>
+      </div>
     </section>
   );
 }
