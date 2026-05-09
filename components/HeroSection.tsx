@@ -1,62 +1,42 @@
-import React from "react";
+import Link from "next/link";
+import HeroWorkingAnimation from "./HeroWorkingAnimation";
+import ParticleBackground from "./ParticleBackground";
+import { ArrowRight, Braces } from "lucide-react";
 
-type Props = {};
-
-function HeroSection({}: Props) {
+export default function HeroSection() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-      <div className="z-20 mx-auto mb-8 grid max-w-6xl grid-cols-1 place-items-center pt-48 text-center">
-        <div className="container">
-          <h1
-            className="text-5xl font-semibold tracking-tight text-balance text-slate-950 dark:text-white sm:text-7xl"
-            data-cy="primary-heading"
-          >
-            <span className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
-              Smart
-            </span>{" "}
-            Repos<div className="lg:hidden"></div>
-            <svg
-              viewBox="0 0 2 2"
-              fill="currentColor"
-              className="mx-6 hidden size-2 lg:inline-flex"
-            >
-              <circle cx="1" cy="1" r="1"></circle>
-            </svg>
-            <span className="rounded-lg bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">
-              Fast
-            </span>{" "}
-            Builds
-          </h1>
-          <p className="text-lg font-medium text-pretty sm:text-xl/8 text-slate-700 dark:text-slate-300 mx-auto mt-6 max-w-3xl">
-            <strong className="font-bold text-slate-950 dark:text-slate-100">
-              Get to green PRs in half the time.
-            </strong>{" "}
-            Nx optimizes your builds, scales your CI, and fixes failed PRs.
-            Built for developers and AI agents.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row"></div>
-          <div className="mt-8 flex items-center justify-center gap-2 text-sm italic">
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                display: "inline-block",
-                transform:
-                  "translateX(205.29px) translateY(0px) translateX(-50%) translateY(-50%)",
-              }}
-            >
-              <div className="h-20 w-20 bg-[radial-gradient(var(--blue-500)_40%,transparent_60%)] opacity-[0.8] dark:bg-[radial-gradient(var(--pink-500)_40%,transparent_60%)]"></div>
-            </div>
-          </div>
-          <div
-            className="relative w-full overflow-hidden rounded-xl border border-slate-100 bg-slate-50 antialiased backdrop-blur-xl dark:border-slate-900 dark:bg-slate-900/[0.8]"
-            style={{ aspectRatio: "16/9" }}
-          ></div>
-        </div>
+    <section className="relative overflow-hidden bg-cream text-center px-5 pt-15 pb-12">
+      <ParticleBackground />
+      <div className="flex justify-center h-28 mb-8">
+        <HeroWorkingAnimation />
       </div>
-    </div>
+
+      <span className="text-[20px] bg-white rounded-full py-4 px-6 text-primary-dark font-semibold">
+        Software Engineer. Tech Enthusiast.
+      </span>
+
+      <h1 className="font-serif text-[clamp(32px,5vw,64px)] leading-[1.15] text-primary-dark max-w-3/5 mx-auto mt-8">
+        Build Production-Ready Software That Scales{" "}
+        <span className="text-orange">From Idea to Production.</span>
+      </h1>
+
+      <p className="text-primary-dark text-[20px] font-medium max-w-3/6 mx-auto mt-12 break-words leading-relaxed">
+        I design and build scalable web applications, APIs, and data pipelines.
+        Specializing in full-stack development with modern frameworks and cloud infrastructure.
+      </p>
+
+      <div className="flex justify-center mt-5">
+        <Link
+        href="mailto:holonouemmanuel0@gmail.com"
+        className="flex items-center text-center gap-2 rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white hover:bg-orange/90 transition-colors"
+      >
+        <span className="bg-white rounded-full text-orange flex justify-center items-center w-[40px] h-[40px]">
+          <Braces />
+        </span>
+        <span className="text-[20px]">Contact me</span>
+        <ArrowRight />
+      </Link>
+      </div>
+    </section>
   );
 }
-
-export default HeroSection;

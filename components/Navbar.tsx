@@ -1,37 +1,45 @@
-import React from "react";
 import Link from "next/link";
-import { SiGithub, SiX, SiReddit, SiGmail } from "@icons-pack/react-simple-icons";
-import { Button } from "./ui/button";
 
-type Props = {};
+const navLinks = [
+  { label: "Home", href: "#" },
+  { label: "Services", href: "#" },
+  { label: "Projects", href: "#" },
+  { label: "Process", href: "#" },
+  { label: "About", href: "#" },
+  { label: "Contact", href: "#" },
+];
 
-const Navbar = (props: Props) => {
+export default function Navbar() {
   return (
-    <div className="fixed inset-x-0 top-0 isolate z-[5] flex px-4 print:hidden">
-      <div className="mx-auto mt-2 hidden w-full max-w-7xl items-center justify-between space-x-10 rounded-lg border border-slate-200/40 bg-white/70 px-4 py-2 shadow-sm backdrop-blur-xl backdrop-saturate-150 lg:flex dark:border-slate-800/60 dark:bg-slate-950/40">
-        <nav className="flex gap-2 items-center">
-          <Link href="#" className="nav-link">Docs</Link>
-          <Link href="#" className="nav-link">Blog</Link>
-          <Link href="#" className="nav-link">Solutions</Link>
-          <Link href="#" className="nav-link">Resources</Link>
-          <Link href="#" className="nav-link">Ai</Link>
-          <Link href="#" className="nav-link">Nx Cloud</Link>
-          <Link href="#" className="nav-link">Nx Enterprise</Link>
-        </nav>
-        <div className="flex">
-          <Link href="https://example.com" className="inline-flex items-center p-2 opacity-60 hover:opacity-90">
-            <SiX size={18} />
-          </Link>
-          <Link href="https://example.com" className="inline-flex items-center p-2 opacity-60 hover:opacity-90">
-            <SiReddit size={18} />
-          </Link>
-          <Link href="https://example.com" className="inline-flex items-center p-2 opacity-60 hover:opacity-90">
-            <SiGithub size={18} />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
+    <nav className="bg-cream">
+      <div className="mx-auto flex items-center justify-between p-10 h-[52px]">
+        <Link
+          href="/"
+          className="flex items-center font-serif font-semibold text-primary-dark text-[20px] tracking-wider"
+        >
+          Datgeek.<span className="">manu</span>
+        </Link>
 
-export default Navbar;
+        {/* Nav Links */}
+        <div className="hidden md:flex gap-7 text-[20px] font-sans font-medium text-primary-dark">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="hover:text-orange transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+
+        <Link
+          href="mailto:holonouemmanuel0@gmail.com"
+          className="rounded-full flex justify-center items-center bg-orange px-5 py-2.5 text-[16px] font-medium text-white hover:bg-orange/90 transition-colors"
+        >
+          Work with me
+        </Link>
+      </div>
+    </nav>
+  );
+}
