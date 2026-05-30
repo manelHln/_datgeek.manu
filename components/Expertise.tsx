@@ -76,20 +76,6 @@ export default function Expertise() {
           "-=0.4", // stagger start time
         );
       });
-      // tl.fromTo(
-      //   ctaRef.current,
-      //   {
-      //     xPercent: 100,
-      //     opacity: 0,
-      //   },
-      //   {
-      //     xPercent: 0,
-      //     opacity: 1,
-      //     duration: 1,
-      //     ease: "power2.out",
-      //   },
-      //   "-=0.2",
-      // );
     },
     { scope: sectionRef },
   );
@@ -97,7 +83,7 @@ export default function Expertise() {
   return (
     <section
       ref={sectionRef}
-      className="bg-cream px-6 md:px-20 min-h-screen py-20 flex flex-col overflow-hidden"
+      className="bg-cream px-6 md:px-20 py-20 flex flex-col overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className=" mb-12">
